@@ -76,14 +76,13 @@ def colour(world):
 
 r,c = 1,1
 # World:Feature:Generation ~~ 5:1:20
-map = []
+
 world = np.zeros((35,35))
 feature = np.zeros((7,7))
+#Generation values best between 75 & 125
 generation = 125
 while generation:
     world + evolve(world,feature)
-    map.append(world)
     generation -= 1
-map = np.vstack(map)
-np.save("map", map)
+
 colour(world)
