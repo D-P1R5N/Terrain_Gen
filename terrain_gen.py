@@ -80,7 +80,7 @@ r,c = 1,1
 world = np.zeros((35,35))
 feature = np.zeros((7,7))
 #Generation values best between 75 & 125
-generation = 125
+generation = 100
 while generation:
     world + evolve(world,feature)
     generation -= 1
